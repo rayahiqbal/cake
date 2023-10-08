@@ -2,8 +2,8 @@
 /* Updated CSS for the main page */
 
 .cake {
-    width: 600px; /* Increase the width to make the cake bigger horizontally */
-    height: 800px; /* Adjust height for better proportions */
+    width: 800px; /* Increase the width to make the cake bigger horizontally */
+    height: 600px; /* Adjust height for better proportions */
     background-color: #ffd9e8;
     border-radius: 20% 20% 60% 60% / 35% 35% 65% 65%;
     position: relative;
