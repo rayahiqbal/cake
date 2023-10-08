@@ -9,78 +9,45 @@ body {
     height: 100vh;
 }
 
+table {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #f0e3d8; /* Light brown for table */
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .cake {
-    width: 200px;
-    height: 400px;
-    background-color: #ffb6c1; /* Pastel pink */
+    width: 300px;
+    height: 600px;
+    background-color: #ffb6c1;
     border-radius: 50%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* Center the cake on the table */
 }
 
 .layer {
     width: 100%;
-    height: 80px;
-    background-color: #ffcccb; /* Lighter pink */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.layer a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2em;
-}
-
-.layer:nth-child(odd) {
-    background-color: #ffc0cb; /* Even lighter pink */
-}
-
-/* Hover effect */
-.layer:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.cake {
-    width: 300px; /* Increased size */
-    height: 600px; /* Increased size */
-    background-color: #ffb6c1; /* Pastel pink */
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden; /* To hide overflowing content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
-
-.layer {
-    width: 100%;
-    height: 80px;
-    background-color: #ffcccb; /* Lighter pink */
-    border-radius: 20px; /* Rounded edges for layers */
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .layer:nth-child(odd) {
-    background-color: #ffc0cb; /* Even lighter pink */
+    background-color: #ff85a2; /* Light pink */
+    height: 80px;
+}
+
+.layer:nth-child(even) {
+    background-color: #ff6f8c; /* Slightly darker pink */
+    height: 70px;
 }
 
 .layer a {
@@ -89,8 +56,62 @@ body {
     font-size: 1.2em;
 }
 
-/* Hover effect */
-.layer:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+.frosting {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-color: #ffffff; /* White frosting */
+    border-radius: 50%;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    border: 10px solid #ff85a2; /* Pink frosting border */
+    background-image: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+}
+
+.decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ffcccb;
+    border-radius: 50%;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.sprinkles {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffdf87; /* Yellow sprinkles */
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.sprinkles:nth-child(odd) {
+    bottom: 160px;
+}
+
+.sprinkles:nth-child(even) {
+    bottom: 180px;
+}
+
+.cherry {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ff1f41; /* Red cherry */
+    border-radius: 50%;
+    bottom: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    background-image: radial-gradient(ellipse at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
 }
